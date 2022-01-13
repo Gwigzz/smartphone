@@ -2,53 +2,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 /* variables */
-:root{
-    --blanc: white;
-    --bleu-sombre: #0E143C;
+:root {
+    --white: white;
     --dark-30: rgba(0, 0, 0, 0.3);
+    --grey-50: rgba(233, 233, 233, 0.5);
+    --blue: #0E143C;
+    --blue-light: #179de9;
+    --blue-dark: #00507c;
+    --pink-light: #F1C6D7;
+    --red-50: rgba(255, 0, 0, 0.5);
 }
 
+/* degradé rose clair et bleu */
 body {
     margin: 0;
-    background: linear-gradient(90deg, #0e143cf6, #00517cd8, pink);
+    background: linear-gradient(to right, var(--blue), var(--pink-light));
+    background-position: center;
+    background-repeat: repeat;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
-    color: var(--blanc);
+    color: var(--white);
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color .3s;
+}
+
+a:hover {
+    color: var(--grey-50) !important;
+    transition: color .3s;
 }
 
 /* nav */
-.container-nav nav {
+.container-nav {
     /* background-color: green; */
-    display: flex;
+    /*  display: flex;
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid white;
-    margin: 0 2.4rem 0 2.4rem;
+    margin: 0 2.4rem 0 2.4rem; */
 }
 
 .container-nav nav ul {
     list-style: none;
     display: flex;
-    /*  background-color: orange; */
-    gap: 1rem;
 }
 
 .container-nav nav ul li a {
     text-decoration: none;
     padding: 0.2rem 0.9rem;
-    color: var(--blanc);
+    color: var(--white);
+    transition: color .3s;
+
 }
 
 .img-logo {
     max-width: 130px;
-}
-
-.box-nav-left {
-    /* background-color: rgb(90, 90, 90); */
-}
-
-.box-nav-right {
-    /* background-color: rgb(243, 0, 0); */
 }
 
 .link-signup {
@@ -57,19 +68,60 @@ body {
 }
 
 /* main */
-main{
-    background-color: orange;
+main {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    /* background-color: orange; */
+    position: relative;
 }
 
-.container-description{
-    background-color: green;
-    width: 350px;
-    height: 350px;
+.container-img-card{
+    /* background-color: green; */
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.container-card{
-    background-color: rgb(38, 51, 38);
+.img-card-left{
+    position: absolute;
+    left: 0;
+    width: 180px;
+}
+
+.img-card-midle{
+    /* position: absolute; */
+    z-index: 1;
+    width: 220px;
+
+}
+
+.img-card-right{
+    position: absolute;
+    right: 0;
+    width: 180px;
+
+}
+
+/* footer */
+.container-footer {
+    text-align: center;
+    background-color: rgb(58, 58, 58);
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-footer nav ul {
+    /*  background-color: green; */
+    display: flex;
+    gap: 1.1rem;
+    list-style: none;
+}
+
+.container-footer nav ul li a {
+    color: var(--white);
+    text-decoration: none;
 }
