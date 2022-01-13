@@ -1,0 +1,75 @@
+/* Import police */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* variables */
+:root{
+    --blanc: white;
+    --bleu-sombre: #0E143C;
+    --dark-30: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(90deg, #0e143cf6, #00517cd8, pink);
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: var(--blanc);
+}
+
+/* nav */
+.container-nav nav {
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid white;
+    margin: 0 2.4rem 0 2.4rem;
+}
+
+.container-nav nav ul {
+    list-style: none;
+    display: flex;
+    /*  background-color: orange; */
+    gap: 1rem;
+}
+
+.container-nav nav ul li a {
+    text-decoration: none;
+    padding: 0.2rem 0.9rem;
+    color: var(--blanc);
+}
+
+.img-logo {
+    max-width: 130px;
+}
+
+.box-nav-left {
+    /* background-color: rgb(90, 90, 90); */
+}
+
+.box-nav-right {
+    /* background-color: rgb(243, 0, 0); */
+}
+
+.link-signup {
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+/* main */
+main{
+    background-color: orange;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-description{
+    background-color: green;
+    width: 350px;
+    height: 350px;
+}
+
+.container-card{
+    background-color: rgb(38, 51, 38);
+}
