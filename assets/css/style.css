@@ -13,7 +13,6 @@
     --red-50: rgba(255, 0, 0, 0.5);
 }
 
-/* degradé rose clair et bleu */
 body {
     margin: 0;
     background: transparent linear-gradient(130deg, var(--blue) 0, var(--pink-light) 100%) fixed;
@@ -21,6 +20,18 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 0.9rem;
     color: var(--white);
+}
+
+/* a link */
+a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color .3s;
+}
+
+a:hover {
+    color: var(--grey-50) !important;
+    transition: color .3s;
 }
 
 /* header / nav */
@@ -31,20 +42,10 @@ header {
     padding: 10px 0;
 }
 
-header nav a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color .3s;
-}
-
-header nav a:hover {
-    color: var(--grey-50) !important;
-    transition: color .3s;
-}
-
 .nav-left,
 .nav-left ul,
-.nav-right ul {
+.nav-right ul,
+.container-footer ul {
     display: flex;
     align-items: center;
     gap: 1.3rem;
@@ -72,7 +73,7 @@ main {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding: 150px 0;
+    padding: 250px 0;
 }
 
 .intro {
@@ -131,13 +132,15 @@ main {
     position: absolute;
     left: 50%;
     top: -20%;
-    transform: translateX(-50%); /* deplacement de -50% sur l'horizontal */
+    transform: translateX(-50%);
+    /* deplacement de -50% sur l'horizontal */
     filter: drop-shadow(40px 40px 40px rgba(34, 34, 34, 0.335));
 }
 
 
 /* footer */
 .container-footer {
+    margin-top: 5.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -150,13 +153,41 @@ main {
     opacity: 0.5;
 }
 
-.container-footer nav ul {
-    display: flex;
-    gap: 1.1rem;
-    list-style: none;
+/* max width: 1500px */
+@media screen and (max-width: 1500px) {
+    main {
+        display: block;
+        padding: 0.2rem;
+        column-gap: 2;
+    }
+
+    .intro {
+        width: 100%;
+        padding: 2.5rem 0;
+        margin: 0.9rem auto 2.5rem auto;
+    }
+
+    .smartphones {
+        display: inline-block;
+        width: 100%;
+        margin: 2.5rem auto 1rem auto;
+    }
+
+    .smartphones img {
+        max-width: 30%;
+    }
 }
 
-.container-footer nav ul li a {
-    color: var(--white);
-    text-decoration: none;
+/* max width: 1200px */
+@media screen and (max-width: 1200px) {
+    .container{
+        width: auto;
+    }
+}
+
+/* max width: 950px */
+@media screen and (max-width: 950px) {
+    header{
+        display: inline-block;
+    }
 }
