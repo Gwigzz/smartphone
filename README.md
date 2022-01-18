@@ -1,6 +1,8 @@
 # Smartphone
 
-Couleurs :
+### A simple template
+
+Colors :
 
 ```
 White: #ffffff
@@ -13,7 +15,7 @@ Pink light : #F1C6D7
 Red opacity 50% : rgba(255, 0, 0, 0.5)
 ```
 
-Police de caractères : Lato
+Police : Lato
 
 
 ## Preview
