@@ -158,7 +158,7 @@ main {
     main {
         display: block;
         padding: 0.2rem;
-        column-gap: 2;
+        /* column-gap: 2; */
     }
 
     .intro {
